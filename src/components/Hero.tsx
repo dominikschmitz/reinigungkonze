@@ -14,36 +14,36 @@ export const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-accent/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-accent/60" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
             Professionelle
-            <span className="block bg-gradient-to-r from-accent to-accent-hover bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-accent to-accent-hover bg-clip-text text-transparent drop-shadow-lg">
               Gebäudereinigung
             </span>
             in Paderborn
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             Über 10 Jahre Erfahrung für makellose Sauberkeit. 
             Ihre Zufriedenheit ist unsere Priorität.
           </p>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-white/80">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-white/90">
+            <div className="flex items-center gap-2 drop-shadow-md">
               <CheckCircle className="w-5 h-5 text-accent" />
               <span>Über 10 Jahre Erfahrung</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 drop-shadow-md">
               <CheckCircle className="w-5 h-5 text-accent" />
               <span>Familienunternehmen</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 drop-shadow-md">
               <CheckCircle className="w-5 h-5 text-accent" />
               <span>Paderborn & Umgebung</span>
             </div>
@@ -55,7 +55,7 @@ export const Hero = () => {
               variant="call"
               size="xl"
               onClick={handlePhoneCall}
-              className="w-full sm:w-auto animate-pulse"
+              className="w-full sm:w-auto animate-[pulse_3s_ease-in-out_infinite]"
             >
               <Phone className="w-5 h-5" />
               Jetzt kostenlos anrufen
@@ -71,7 +71,7 @@ export const Hero = () => {
             </Button>
           </div>
 
-          <p className="text-white/70 mt-6 text-sm">
+          <p className="text-white/80 mt-6 text-sm drop-shadow-md">
             📞 <strong>+49 (5251) 8793456</strong> • Kostenlose Beratung & unverbindliches Angebot
           </p>
         </div>
