@@ -14,10 +14,10 @@ export const WhatsAppButton = () => {
         variant="whatsapp"
         size="icon"
         onClick={handleWhatsAppClick}
-        className="w-14 h-14 rounded-full shadow-strong animate-pulse hover:animate-none"
+        className="w-14 h-14 rounded-full shadow-strong hover:shadow-medium"
         aria-label="WhatsApp Kontakt"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-8 h-8" />
       </Button>
       
       {/* Tooltip */}
