@@ -55,7 +55,7 @@ export const Hero = () => {
               variant="call"
               size="xl"
               onClick={handlePhoneCall}
-              className="w-full sm:w-auto animate-[pulse_3s_ease-in-out_infinite]"
+              className="w-full sm:w-auto"
             >
               <Phone className="w-5 h-5" />
               Jetzt kostenlos anrufen
