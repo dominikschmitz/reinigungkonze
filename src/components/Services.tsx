@@ -1,9 +1,22 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import cleaningIcon from "@/assets/icon-cleaning.jpg";
 import glassIcon from "@/assets/icon-glass.jpg";
 import facilityIcon from "@/assets/icon-facility.jpg";
+
+// Import service images
+import cleaningStairs from "@/assets/cleaning-stairs.jpg";
+import cleaningPavement from "@/assets/cleaning-pavement.jpg";
+import cleaningDeep from "@/assets/cleaning-deep.jpg";
+import cleaningConstruction from "@/assets/cleaning-construction.jpg";
+import glassWindows from "@/assets/glass-windows.jpg";
+import glassStorefront from "@/assets/glass-storefront.jpg";
+import glassPartitions from "@/assets/glass-partitions.jpg";
+import facilityWinter from "@/assets/facility-winter.jpg";
+import facilityGarden from "@/assets/facility-garden.jpg";
+import facilityWaste from "@/assets/facility-waste.jpg";
 
 export const Services = () => {
   const handlePhoneCall = () => {
@@ -15,6 +28,12 @@ export const Services = () => {
       title: "Gebäudereinigung",
       description: "Professionelle Reinigung für makellose Sauberkeit",
       icon: cleaningIcon,
+      images: [
+        { src: cleaningStairs, alt: "Professionelle Treppenhausreinigung" },
+        { src: cleaningPavement, alt: "Pflaster- und Gehwegreinigung" },
+        { src: cleaningDeep, alt: "Gründliche Grundreinigung" },
+        { src: cleaningConstruction, alt: "Bauendreinigung nach Fertigstellung" }
+      ],
       features: [
         "Treppenhausreinigung",
         "Pflaster Reinigung", 
@@ -26,6 +45,11 @@ export const Services = () => {
       title: "Glasreinigung",
       description: "Kristallklare Fenster und Glasflächen",
       icon: glassIcon,
+      images: [
+        { src: glassWindows, alt: "Professionelle Fensterreinigung" },
+        { src: glassStorefront, alt: "Schaufensterreinigung für Geschäfte" },
+        { src: glassPartitions, alt: "Glastrennwände in Büros" }
+      ],
       features: [
         "Glasflächen",
         "Schaufenster",
@@ -37,6 +61,11 @@ export const Services = () => {
       title: "Hausmeisterdienste",
       description: "Umfassender Service für Ihre Immobilie",
       icon: facilityIcon,
+      images: [
+        { src: facilityWinter, alt: "Winterdienst und Schneeräumung" },
+        { src: facilityGarden, alt: "Professionelle Gartenpflege" },
+        { src: facilityWaste, alt: "Mülltonnenservice und Entsorgung" }
+      ],
       features: [
         "Mülltonnenservice",
         "Winterdienst",
@@ -81,6 +110,12 @@ export const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-0">
+                {/* Image Carousel */}
+                <ImageCarousel 
+                  images={service.images} 
+                  className="mb-6"
+                />
+                
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-foreground">
